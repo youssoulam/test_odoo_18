@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="gestion_biblio"  name="Gestion Bibliotheque" sequence="0"/>
+    <menuitem id="gestion_biblio_conf"  name="Configuration" 
+    parent="gestion_biblio" sequence="1"/>
+    <menuitem id="gestion_biblio_auteurs"  name="Auteurs" 
+    parent="gestion_biblio_conf" sequence="1" action="action_gestion_bibliotheque_auteur" />
+    <menuitem id="gestion_biblio_livres"  name="Livres" 
+    parent="gestion_biblio_conf" sequence="2" action="action_gestion_bibliotheque_livre" />
+
+
+</odoo>

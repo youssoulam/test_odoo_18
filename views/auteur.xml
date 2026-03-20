@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Vue liste du modèle auteur -->
+    <record id="gestion_bibliotheque_auteur_view_list" model="ir.ui.view">
+    <field name="name">gestion.bibliotheque.auteur.view.list</field>
+    <field name="model">gestion.bibliotheque.auteur</field>
+    <field name="arch" type="xml">
+        <list>
+            <field name="name" />
+            <field name="sexe" />
+        </list>
+    </field>
+    </record>
+
+    <!-- Vue formulaire du modèle auteur -->
+    <record id="gestion_bibliotheque_auteur_view_form" model="ir.ui.view">
+    <field name="name">gestion.bibliotheque.auteur.view.form</field>
+    <field name="model">gestion.bibliotheque.auteur</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="name" />
+                    <field name="sexe" />
+                </group>
+                <notebook>
+                    <page name="list_book" string="Liste des livres">
+                        <field name="livre_ids" />
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+    </record>
+
+    <!-- l'action du menu auteur -->
+    <record model="ir.actions.act_window" id="action_gestion_bibliotheque_auteur">
+        <field name="name">Auteurs</field>
+        <field name="res_model">gestion.bibliotheque.auteur</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="gestion_bibliotheque_auteur_view_list"/>
+    </record>
+
+</odoo>
