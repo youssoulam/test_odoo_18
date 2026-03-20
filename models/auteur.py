@@ -7,7 +7,7 @@ class Auteurs(models.Model):
     _name = "gestion.bibliotheque.auteur"
     _description = "Liste des auteurs"
 
-    name = fields.Char(string="Nom et Prénom", required=True)
+    name = fields.Char(string="NOM et Prénom", required=True)
     sexe = fields.Selection(
         [("male", "Masculin"), ("female", "Féminin")], string="Sexe"
     )
